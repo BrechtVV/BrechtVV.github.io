@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="const.js"></script>
+<script defer src="index.js"></script>
+<link rel="stylesheet" href="index.css">
+
+<body>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <form id="form" method="POST" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbzxno7Gb3FnZS5QtiGZQQL6YTQDbSFLQMdvcVEJ6cqvEnlcFg/exec">
+        <div class="header">
+            <h1>
+                3PT-SOLIDPHARMA
+            </h1>
+            <h2>
+                Bestelling SolidPharma supplementen
+            </h2>
+            <label for="name">Voornaam</label>
+            <input id="name" name="name" type="text" /><br>
+            <label for="surname">Naam</label>
+            <input id="surname" name="surname" type="text" />
+        </div>
+        <div class="cart-container">
+            <div class="empty" style="display:none">
+                No more twinkies !
+            </div>
+            <ul class="cart" id="list">
+                <li hidden id="item-template" class="product " data-price="0 " data-quantity="0">
+                    <div class="product-preview">
+                        <div class="thumbnail">
+                            <img class="image" src="?" />
+                        </div>
+                        <div class="product-paper">
+                            <div class="product-name">? NAME</div>
+                            <div class="product-price">? EUR</div>
+                        </div>
+                    </div>
+                    <div class="product-quantity"> x0 </div>
+                    <div class="product-interactions">
+                        <div class="button plus"> + </div>
+                        <div class="button minus"> - </div>
+                        <div class="button del"></div>
+                    </div>
+                    <input name="prod-template" type="number" value="0" />
+                </li>
+            </ul>
+        </div>
+        <table class="bill">
+            <tr class="subtotal">
+                <td class="label">Subtotaal :</td>
+                <td class="value">0.00 EURO</td>
+            </tr>
+            <tr class="salestax">
+                <td class="label">Korting : </td>
+                <td class="value">0.00 EURO</td>
+            </tr>
+            <tr class="total">
+                <td class="label">Totaal :</td>
+                <td class="value">0.00 EURO</td>
+            </tr>
+        </table>
+        <div class="actions">
+            <div class="big-button go">
+                <input hidden id="submit" type="submit" onclick="finish()" />
+                <label id="finish" for="submit">Bestelling afronden</label>
+                <span id="success"></span>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
