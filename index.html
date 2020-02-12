@@ -21,9 +21,6 @@
             <input required id="email" name="email" type="email" />
         </div>
         <div class="cart-container">
-            <div class="empty" style="display:none">
-                No more twinkies !
-            </div>
             <ul class="cart" id="list">
                 <li hidden id="item-template" class="product" data-price="0 " data-quantity="0">
                     <div class="product-preview">
@@ -60,12 +57,8 @@
             </tr>
         </table>
         <div class="actions">
-            <div class="big-button go" id="go">
-                <input hidden id="submit" type="submit"/>
-                <label for="submit">Bestelling afronden</label>
-            </div>
-            <div hidden class="submitted" id="finish">
-            </div>
+            <input hidden id="submit" type="submit"/>
+            <label class="big-button go" for="submit">Bestelling afronden</label>
         </div>
     </form>
 </body>

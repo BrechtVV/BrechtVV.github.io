@@ -1,9 +1,3 @@
-function finish() {
-    document.getElementById('finish').hidden = false;    
-    document.getElementById('finish').innerHTML = 'Klaar';    
-    document.getElementById('go').hidden = true;
-}
-
 var form = document.getElementById('form');
 items.forEach((item, index) => {
     console.log(item);
