@@ -261,7 +261,6 @@ label {
 }
 
 .actions .big-button {
-    /*position: absolute;*/
     cursor: pointer;
     user-select: none;
     padding: 1em;
