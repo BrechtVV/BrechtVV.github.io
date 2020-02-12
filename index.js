@@ -1,10 +1,7 @@
-function checkBeforeSubmit() {
-    document.getElementById('success').innerHTML = 'Submitted';
-}
-
 function finish() {
-    document.getElementById('success').innerHTML = 'Klaar';
-    document.getElementById('finish').innerHTML = '';
+    document.getElementById('finish').hidden = false;    
+    document.getElementById('finish').innerHTML = 'Klaar';    
+    document.getElementById('go').hidden = true;
 }
 
 var form = document.getElementById('form');

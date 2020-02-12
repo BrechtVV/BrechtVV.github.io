@@ -7,18 +7,18 @@
 
 <body>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-    <form id="form" method="POST" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbzxno7Gb3FnZS5QtiGZQQL6YTQDbSFLQMdvcVEJ6cqvEnlcFg/exec">
+    <form id="form" method="POST" onsubmit="finish()" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbzxno7Gb3FnZS5QtiGZQQL6YTQDbSFLQMdvcVEJ6cqvEnlcFg/exec">
         <div class="header">
             <img class="logo" src="images/3PT.png" />
             <h2>
                 Bestelling SolidPharma supplementen
             </h2>
             <label for="name">Voornaam</label>
-            <input id="name" name="name" type="text" /><br>
+            <input required id="name" name="name" type="text" /><br>
             <label for="surname">Naam</label>
-            <input id="surname" name="surname" type="text" /><br>
+            <input required id="surname" name="surname" type="text" /><br>
             <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" />
+            <input required id="email" name="email" type="email" />
         </div>
         <div class="cart-container">
             <div class="empty" style="display:none">
@@ -60,10 +60,11 @@
             </tr>
         </table>
         <div class="actions">
-            <div class="big-button go">
-                <input hidden id="submit" type="submit" onclick="finish()" />
-                <label id="finish" for="submit">Bestelling afronden</label>
-                <span id="success"></span>
+            <div class="big-button go" id="go">
+                <input hidden id="submit" type="submit"/>
+                <label for="submit">Bestelling afronden</label>
+            </div>
+            <div hidden class="submitted" id="finish">
             </div>
         </div>
     </form>

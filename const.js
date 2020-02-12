@@ -73,7 +73,7 @@ var items = [{
     {
         name: "Pure C",
         price: 9.95,
-        amount: 30,
+        amount: 36,
         url: "images/c.png"
     },
     {
