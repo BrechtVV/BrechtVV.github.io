@@ -7,9 +7,9 @@
 
 html,
 body {
-    font: 16px "Mouse Memoirs";
-    background: #dff2ff;
-    color: #523118;
+    font: 20px "Mouse Memoirs";
+    background: #F4FAFF;
+    color: #000000;
     width: 100%;
     height: 100%;
 }
@@ -18,14 +18,15 @@ body {
     font: 16px "Roboto";
     text-align: center;
     padding: 1em 0 2em;
-    background-image: repeating-linear-gradient(45deg, #1c365f, #9b9795 100px, #dd6809 100px, #865127 200px);
-    color: #f0dccd;
+    /*background-image: repeating-linear-gradient(45deg, #1c365f, #9b9795 100px, #dd6809 100px, #865127 200px);*/
+    background: #B1F8F2;
+    color: #000000;
     box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0.25) inset;
 }
 
-input[type=text] {
+input[type=text], input[type=email] {
     text-align: left;
-    width: 300px;
+    width: 500px;
     padding: 12px 20px;
     margin: 10px 10px 10px 10px;
     display: inline-block;
@@ -37,6 +38,14 @@ input[type=text] {
 
 label {
     font-size: 1.5em;
+    display: inline-block;
+    width: 150px;
+    margin: 5px;
+    text-align: right;
+}
+
+#finish {
+    width: 400px;
 }
 
 .header h1 {
@@ -46,6 +55,11 @@ label {
 .header p {
     font-size: 1.2em;
     font-style: italic;
+}
+
+.logo {
+    width: 400px;
+    margin: 10px 10px 10px 10px; 
 }
 
 .cart-container {
@@ -66,7 +80,7 @@ label {
     list-style: none;
     height: 280px;
     width: 100%;
-    cursor: grab;
+    /*cursor: grab;*/
     position: relative;
     left: 0;
     transform: translate3d(0, 0, 0);
@@ -74,9 +88,10 @@ label {
 
 .cart .product {
     position: relative;
-    width: 200px;
-    height: 280px;
+    width: 300px;
+    height: 450px;
     float: left;
+    margin: 2px 2px 2px 2px;
 }
 
 .cart .product:hover {
@@ -85,22 +100,22 @@ label {
 
 .cart .product:nth-child(3n+1) .product-preview,
 .cart .product:nth-child(3n+1) .product-interactions {
-    background: #E8B0AF;
+    background: #23C9FF;
 }
 
 .cart .product:nth-child(3n+2) .product-preview,
 .cart .product:nth-child(3n+2) .product-interactions {
-    background: #FDDAC4;
+    background: #9AC4F8;
 }
 
 .cart .product:nth-child(3n) .product-preview,
 .cart .product:nth-child(3n) .product-interactions {
-    background: #F1D5A5;
+    background: #77B6EA;
 }
 
 .cart .product .product-preview {
     padding: 1em;
-    height: 280px;
+    height: 450px;
     position: relative;
 }
 
@@ -118,8 +133,8 @@ label {
 .cart .product .product-preview .product-paper {
     position: absolute;
     height: 100px;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.65);
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.1);
     padding: 1em;
     display: block;
     width: 100%;
@@ -127,13 +142,13 @@ label {
 }
 
 .cart .product .product-preview .product-name {
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-align: center;
 }
 
 .cart .product .product-preview .product-price {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .cart .product .product-quantity {
@@ -151,34 +166,35 @@ label {
     backface-visibility: hidden;
 }
 
-.cart .product:hover .product-interactions,
+/*.cart .product:hover .product-interactions,
 .cart .product .visible {
     opacity: 1 !important;
     transform: perspective(600px) rotateX(0deg) !important;
-}
+}*/
 
 .cart .product .product-interactions {
     position: absolute;
     bottom: 100px;
     width: 100%;
-    height: 60px;
+    height: 80px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.4);
     border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
-    transform-origin: 50% 100% 0;
+    /*transform-origin: 50% 100% 0;
     transform: perspective(600px) rotateX(90deg);
     opacity: 0;
-    transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;*/
     display: table;
 }
 
 .cart .product .product-interactions .button {
     width: 32%;
-    height: 60px;
+    height: 80px;
     float: left;
     text-align: center;
     font-size: 5em;
     line-height: 0.75em;
     color: #999;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     user-select: none;
     transition: 0.1s all ease-in-out;
@@ -233,8 +249,8 @@ label {
     padding: 1em;
     font-size: 1.4em;
     line-height: 1.6em;
-    background: #F1D5A5;
-    color: #48320b;
+    background: #B1F8F2;
+    color: #000000;
     width: 100%;
 }
 

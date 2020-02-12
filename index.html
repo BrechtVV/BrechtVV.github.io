@@ -9,16 +9,16 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     <form id="form" method="POST" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbzxno7Gb3FnZS5QtiGZQQL6YTQDbSFLQMdvcVEJ6cqvEnlcFg/exec">
         <div class="header">
-            <h1>
-                3PT-SOLIDPHARMA
-            </h1>
+            <img class="logo" src="images/3PT.png" />
             <h2>
                 Bestelling SolidPharma supplementen
             </h2>
             <label for="name">Voornaam</label>
             <input id="name" name="name" type="text" /><br>
             <label for="surname">Naam</label>
-            <input id="surname" name="surname" type="text" />
+            <input id="surname" name="surname" type="text" /><br>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" />
         </div>
         <div class="cart-container">
             <div class="empty" style="display:none">
@@ -50,13 +50,13 @@
                 <td class="label">Subtotaal :</td>
                 <td class="value">0.00 EURO</td>
             </tr>
-            <tr class="salestax">
-                <td class="label">Korting : </td>
-                <td class="value">0.00 EURO</td>
+            <tr class="discount">
+                <td class="label">Korting (30%) : </td>
+                <td class="value">0.000 EURO</td>
             </tr>
             <tr class="total">
                 <td class="label">Totaal :</td>
-                <td class="value">0.00 EURO</td>
+                <td class="value">0.000 EURO</td>
             </tr>
         </table>
         <div class="actions">
