@@ -124,5 +124,4 @@ var items = [{
         amount: 30,
         url: "images/curcuma.png"
     },
-
 ]
